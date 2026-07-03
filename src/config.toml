@@ -1,0 +1,4 @@
+svn = 'C:\Software\Apache-Subversion-1.14.5-2\bin\svn.exe'  # svn executable path
+url = 'http://' # svn url
+download_path = 'C:\down\'
+terminal_encoding = 'GBK'
