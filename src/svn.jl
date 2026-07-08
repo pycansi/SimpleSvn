@@ -61,7 +61,7 @@ end
 
 function handle()::Nothing
     print("> ")
-    local input = @pipe readline() |> split(_," ")
+    local input = @pipe readline() |> eachmatch(r""""[^"]*"|\S+""" ,_) |> collect |> getproperty.(_,:match) |> strip.(_, '"')
     @match input begin 
         ["list"] => list(url_current) |> print_list
         ["list", url] => list(url) |> print_list
